@@ -105,7 +105,7 @@ suggestionButtons.forEach((btn) => {
 });
 
 // Resources 
-module.exports = {
+export default {
   trailingSlash: false,
   async headers() {
     return [
