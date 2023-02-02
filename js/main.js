@@ -106,7 +106,7 @@ suggestionButtons.forEach((btn) => {
 
 // Headers CORS
 module.exports = {
-  trailingSlash: false,
+
   async headers() {
     return [
       {
