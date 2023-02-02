@@ -106,11 +106,3 @@ suggestionButtons.forEach((btn) => {
 
 // Resources 
 
-import helmet from 'helmet';
-const helmet = require("helmet");
-
-app.use(
-  helmet({
-    crossOriginResourcePolicy: false,
-  })
-);
