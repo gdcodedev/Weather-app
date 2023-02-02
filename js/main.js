@@ -125,3 +125,11 @@ export default  {
     return [];
   }
 };
+
+const helmet = require("helmet");
+
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+  })
+);
