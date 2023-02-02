@@ -105,8 +105,7 @@ suggestionButtons.forEach((btn) => {
 });
 
 // Resources 
-export default {
-  trailingSlash: false,
+const headers = {
   async headers() {
     return [
       {
