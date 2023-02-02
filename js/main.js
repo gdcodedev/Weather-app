@@ -67,7 +67,7 @@ const showWeatherData = async (city) => {
   descElement.innerText = data.weather[0].description;
   weatherIconElement.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+    `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
   );
   countryElement.setAttribute("src", apiCountryURL + data.sys.country);
   umidityElement.innerText = `${data.main.humidity}%`;
