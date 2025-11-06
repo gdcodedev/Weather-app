@@ -28,6 +28,7 @@
     color: #fdfdfd;
     border-radius: 1rem;
     max-width: 400px;
+    position: relative;
   }
   
   /* Form */
@@ -154,4 +155,33 @@
   
   #suggestions button:hover {
     opacity: 1;
+  }
+
+  /* Botão Voltar */
+  .back-button {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 10rem;
+    border: none;
+    background-color: #00000062;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .back-button:hover {
+    opacity: 1;
+    background-color: #00000080;
+  }
+
+  .back-button i {
+    font-size: 0.9rem;
   }

@@ -34,6 +34,8 @@ const loader = document.querySelector("#loader");
 
 const suggestionContainer = document.querySelector("#suggestions");
 const suggestionButtons = document.querySelectorAll("#suggestions button");
+const backButton = document.querySelector("#back-button");
+const formContainer = document.querySelector(".form");
 
 // Função para mudar o background baseado na cidade
 const changeBackgroundImage = async (city) => {
@@ -274,8 +276,27 @@ const showErrorMessage = () => {
 const hideInformation = () => {
   errorMessageContainer.classList.add("hide");
   weatherContainer.classList.add("hide");
-
   suggestionContainer.classList.add("hide");
+};
+
+// Função para voltar ao menu inicial
+const goBackToHome = () => {
+  // Esconder dados do clima e mensagens de erro
+  weatherContainer.classList.add("hide");
+  errorMessageContainer.classList.add("hide");
+  
+  // Mostrar formulário e sugestões novamente
+  formContainer.classList.remove("hide");
+  suggestionContainer.classList.remove("hide");
+  
+  // Limpar o input
+  cityInput.value = "";
+  
+  // Resetar o background para o padrão
+  document.body.style.backgroundImage = `url(/img/bg-weather.jpg)`;
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.backgroundRepeat = "no-repeat";
 };
 
 const showWeatherData = async (city) => {
@@ -347,4 +368,9 @@ suggestionButtons.forEach((btn) => {
 
     showWeatherData(city);
   });
+});
+
+// Botão Voltar
+backButton.addEventListener("click", () => {
+  goBackToHome();
 });
